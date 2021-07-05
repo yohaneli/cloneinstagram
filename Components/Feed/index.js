@@ -4,7 +4,7 @@ import { View, Text } from 'react-native'
 const index = () => {
     return (
         <View>
-            <Text>Feed</Text>
+            <Text>Feed P</Text>
         </View>
     )
 }
