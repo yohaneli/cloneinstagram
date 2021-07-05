@@ -1,0 +1,98 @@
+{
+  "project_info": {
+    "project_number": "632236548886",
+    "firebase_url": "https://food-app-2da2f-default-rtdb.firebaseio.com",
+    "project_id": "food-app-2da2f",
+    "storage_bucket": "food-app-2da2f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:632236548886:android:fe2c0b6533286d77c66637",
+        "android_client_info": {
+          "package_name": "com.appfood"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "632236548886-3f6k3lb48ahe5089a00mus3q3bqmadnb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYS-BDPuDY8LU8mzt1FLdPsuCqrihm_n8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "632236548886-3f6k3lb48ahe5089a00mus3q3bqmadnb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:632236548886:android:3726ef512ac07e1ac66637",
+        "android_client_info": {
+          "package_name": "com.foodapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "632236548886-3f6k3lb48ahe5089a00mus3q3bqmadnb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYS-BDPuDY8LU8mzt1FLdPsuCqrihm_n8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "632236548886-3f6k3lb48ahe5089a00mus3q3bqmadnb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:632236548886:android:3d6a7f7bbc157bb0c66637",
+        "android_client_info": {
+          "package_name": "com.instagram"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "632236548886-3f6k3lb48ahe5089a00mus3q3bqmadnb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYS-BDPuDY8LU8mzt1FLdPsuCqrihm_n8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "632236548886-3f6k3lb48ahe5089a00mus3q3bqmadnb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
