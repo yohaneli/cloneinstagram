@@ -1,6 +1,12 @@
 import React,{useContext,useState,useEffect} from 'react';
 import {StyleSheet, View,Image,FlatList,StatusBar,SafeAreaView } from 'react-native';
 import {Button,Text,Input } from 'react-native-elements';
+import Icon from 'react-native-vector-icons/FontAwesome';
+import MaterialButtonShare from "./MaterialButtonShare";
+
+
+
+
 
 
 import {FirebaseContext} from '../../FirebaseContext';
@@ -11,7 +17,7 @@ const Item = ({ title }) => (
       <Text style={styles.title}>{title}</Text>
     </View>
   );
-const index = ({id,userId}) => {
+const index = (props,{id,userId}) => {
     const {queryPostId,queryAddComment,queryDetails} = useContext(FirebaseContext);
    // console.log("queryUsers :",queryUsers)
     
@@ -69,50 +75,92 @@ const index = ({id,userId}) => {
         }
     },[])
     return (
-        <SafeAreaView  style={styles.container}>
+        <SafeAreaView  style={[styles.container, props.style]}>
             <Image
-                source={{uri:'https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg' }}
-                resizeMode="contain"
-                style={styles.image}
-            ></Image>
-            <Text>{contactValue?.description}</Text>
+                source={{uri:'https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg' }}               
+                style={styles.cardItemImagePlace}
+            />
+            <View style={styles.bodyContent}>
+                <Text style={styles.titleStyle}>{contactValue?.description}</Text>
+                <MaterialButtonShare
+                style={styles.materialButtonShare}
+            />
+            </View>
             <FlatList
                 data={comment}
                 renderItem={renderItem}
                 keyExtractor={item => item.id}
+                ListEmptyComponent={()=> <Text>Vous n'avez pas de detail</Text>  }
             />
             <Input  
                     placeholder='Commentaire'
                     value={stateCommit}
                     onChangeText={changeCommit}
-            />
-            <Button
-                        title="Envoyer"
-                        type="outline"
+                    rightIcon={  <Icon
+                        name='send'
+                        size={24}
+                        color='black'
                         onPress={saveName}
-                    />
+                      />}
+            />
+            
+           
         </SafeAreaView >
     )
 }
 const styles = StyleSheet.create({
     container: {
-      flex: 1,
-      marginTop: StatusBar.currentHeight || 0,
+        flex: 1,
+        marginTop: StatusBar.currentHeight || 0,
+        borderWidth: 1,
+        borderRadius: 2,
+        borderColor: "#CCC",
+        flexWrap: "nowrap",
+        backgroundColor: "#FFF",
+        shadowColor: "#000",
+        shadowOffset: {
+            width: -2,
+            height: 2
+        },
+        shadowOpacity: 0.1,
+        shadowRadius: 1.5,
+        elevation: 3,
+        overflow: "hidden"
+    },
+    cardItemImagePlace: {
+        backgroundColor: "#ccc",
+        minHeight: 210,
+        flex: 1
+      },
+    materialButtonShare: {
+        position: "absolute",
+        marginLeft:350,
+    },
+    bodyContent: {
+        padding: 16,
+        paddingTop: 24,
+        justifyContent: "center"
+    },
+    titleStyle: {
+        fontSize: 24,
+        color: "#000",
+        paddingBottom: 12
     },
     image: {
-      width: 200,
-      height: 200,
-      marginTop: 107,
-      marginLeft: 88
+        width: 200,
+        height: 200,
+        marginTop: 107,
+        marginLeft: 88
     },
     item: {
-        backgroundColor: '#f9c2ff',
-        padding: 20,
+        backgroundColor: '#da1b60',
+        padding: 15,
         marginVertical: 8,
-        marginHorizontal: 16,
+        marginHorizontal: 20,
+        borderRadius:25
       },
       title: {
-        fontSize: 32,
+        fontSize: 15,
       },})
 
 export default index
