@@ -6,9 +6,9 @@ import {FirebaseContext} from '../../FirebaseContext';
 
 const index = () => {
 
-    const firebase = useContext(FirebaseContext);
+    const {queryPost} = useContext(FirebaseContext);
 
-    console.log(firebase);
+   // console.log(queryPost());
 
     return (
         <View>
