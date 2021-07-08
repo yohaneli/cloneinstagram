@@ -13,9 +13,9 @@
  const AppContext = () => {
      return (
          <FirebaseContext.Provider value={new Firebase()}>
-             {/* <Provider store={store}> */}
+              <Provider store={store}>
                  <App/>
-             {/* </Provider> */}
+              </Provider>
          </FirebaseContext.Provider>
      )
  }

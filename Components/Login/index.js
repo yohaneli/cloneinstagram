@@ -1,18 +1,38 @@
-import React,{useContext} from 'react';
+import React,{useContext,useEffect,useState} from 'react';
 import { View, Text } from 'react-native';
-
+import { Button,Input } from 'react-native-elements';
 import {FirebaseContext} from '../../FirebaseContext';
 
 
-const index = () => {
+const index = ({navigation}) => {
 
-    const {queryPost} = useContext(FirebaseContext);
-
-   // console.log(queryPost());
 
     return (
         <View>
-            <Text>Login</Text>
+            <Input
+            placeholder="Email"
+            />
+
+            <Input
+            placeholder="Mot de passe"
+            secureTextEntry={true}
+
+            />
+
+            <Button 
+            title="Connexion"
+
+            />
+
+            <Button 
+            title="Inscription"
+
+            />
+
+            <Button 
+            title="Déconnexion"
+            />
+
         </View>
     )
 }

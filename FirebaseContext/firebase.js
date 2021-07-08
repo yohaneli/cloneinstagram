@@ -17,11 +17,9 @@ class Firebase {
 
     queryUsers = () => this.db.collection("users")
 
-    queryOneUsers = (id) => this.db.collection("users").doc(id).get();
-
     //add un user
 
-    queryAddUser = (id,data) => firestore.collection("users").doc(id).set(data);
+    queryAddUser = (id,data) => this.db.collection("users").doc(id).add(data);
 
     //update user
 
