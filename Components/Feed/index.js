@@ -1,23 +1,34 @@
 import React,{useState,useContext,useEffect} from 'react'
-import { View, Text,FlatList,StatusBar,SafeAreaView } from 'react-native'
+import { View, Text,FlatList,StatusBar,SafeAreaView,Image } from 'react-native'
 import {FirebaseContext} from '../../FirebaseContext';
 import {styles} from './style';
-import { Icon } from 'react-native-elements';
 import ButtonModalPost from '../ButtonModalPost';
 import ModalPost from '../ModalPost';
+import CompoMcwc from './compoMcwc';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
-const Item = ({id,user,photo}) => {
+const Item = ({id,user,photo,navigation}) => {
 
     return (
-        <View style={styles.item} >
-            <Text style={styles.item} > ID du post : {id}</Text>
+        <View style={styles.item}>
+            <Icon
+            name="ellipsis-h"
+            size={16}
+            color="black"
+            />
             <Text style={styles.item}> Initiale User :{user}</Text>
-            <Text style={styles.item}> Photo : {photo}</Text>
+            <Image
+            style={{width:200,height:200}}
+            source={{uri:photo}}
+            />
+            
         </View>
+
+            // <CompoMcwc id={id} user={user} photo={photo} />
     )
 }
 
-const index = () => {
+const index = ({navigation}) => {
 
     const {queryPost} = useContext(FirebaseContext);
 

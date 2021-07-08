@@ -1,6 +1,6 @@
-import { AFF_MODAL } from "../Actions/types";
+import { AFF_MODAL,AFF_PHOTO_MODAL } from "../Actions/types";
 
-const initStateModal = {visible:false};
+const initStateModal = {visible:false,tempPhoto:null};
 
 const modal = (state = initStateModal,action) => {
 
@@ -11,6 +11,12 @@ const modal = (state = initStateModal,action) => {
             return action.payload;
 
             break;
+
+        // case AFF_PHOTO_MODAL:
+
+        //     return action.payload;
+
+        //     break;
     
         default:
 

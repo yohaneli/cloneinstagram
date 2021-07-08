@@ -19,7 +19,7 @@ class Firebase {
 
     //add un user
 
-    queryAddUser = (data) => this.db.collection("users").add(data);
+    queryAddUser = (id,data) => this.db.collection("users").doc(id).add(data);
 
     //update user
 
