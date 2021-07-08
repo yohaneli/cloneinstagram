@@ -10,6 +10,7 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 const Item = ({id,user,photo,navigation}) => {
 
     return (
+
         <View style={styles.item}>
             <Icon
             name="ellipsis-h"
@@ -22,6 +23,7 @@ const Item = ({id,user,photo,navigation}) => {
             source={{uri:photo}}
             />
             
+
         </View>
 
             // <CompoMcwc id={id} user={user} photo={photo} />

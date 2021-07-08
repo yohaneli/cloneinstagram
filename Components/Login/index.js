@@ -26,6 +26,7 @@ const index = ({navigation}) => {
 
         } catch (error) {
 
+
             console.log(error);
 
         }
@@ -41,6 +42,7 @@ const index = ({navigation}) => {
     }
 
     
+
 
     return (
         <View>

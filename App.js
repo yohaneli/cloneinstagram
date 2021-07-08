@@ -1,5 +1,4 @@
 import React from 'react';
-import { View, Text } from 'react-native';
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
@@ -17,10 +16,12 @@ const App = () => {
   return (
     <NavigationContainer>
         <Stack.Navigator>
+
           <Stack.Screen name="Feed" component={Feed} />
           <Stack.Screen name="Register" component={Register} />
           <Stack.Screen name="Login" component={Login} />
           <Stack.Screen name="Detail" component={Detail} />
+
         </Stack.Navigator>
 
     </NavigationContainer>
