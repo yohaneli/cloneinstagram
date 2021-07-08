@@ -11,11 +11,12 @@ class Firebase {
         this.storage=storage();
     }
 
+    register = (email, password) => auth().createUserWithEmailAndPassword(email, password)
     // all queries
 
     //list users
 
-    queryUsers = () => firestore.collection("users")
+    queryUsers = () => firestore.collection("users");
 
     //add un user
 
