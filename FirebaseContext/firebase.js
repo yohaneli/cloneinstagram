@@ -11,8 +11,8 @@ class Firebase {
         this.storage=storage();
     }
 
-    // all queries
-
+    
+    register = (email,password)=> auth().createUserWithEmailAndPassword(email,password);
     //list users
 
     queryUsers = () => this.db.collection("users")
@@ -37,6 +37,17 @@ class Firebase {
 
     queryAuthListener = () => auth().onAuthStateChanged();
 
+    
+    
+    //lire comment
+    
+    queryDetails = (id) => this.db.collection("comment").where('gallery','==',id).orderBy('date','desc');
+
+    queryDetailId = (id) => this.db.collection("comment").doc(id).get();
+    
+    queryAddComment = (data) => this.db.collection("comment").add(data);
+    
+    
     // liste des posts
     
     queryPost = () => this.db.collection("gallery");
